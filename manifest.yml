@@ -8,4 +8,4 @@ applications:
   memory: 768M
   instance: 2
   env:
-    WELCOME_MESSAGE: Hello from the review environment variables
+    WELCOME_MESSAGE: Hello from Cloud Foundry
