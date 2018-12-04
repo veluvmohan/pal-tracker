@@ -4,8 +4,8 @@ applications:
   path: build/libs/pal-tracker.jar
   random-route: false
   routes:
-  - route: pal-tracker-pietro-sampsonite.apps.mutton.pal.pivotal.io
+  - route: pal-tracker-boring-crane.cfapps.io
   memory: 768M
   instance: 2
   env:
-    WELCOME_MESSAGE: Hello from the review environment
+    WELCOME_MESSAGE: Hello from the review en vironment
