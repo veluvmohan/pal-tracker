@@ -38,7 +38,7 @@ public class TimeEntryApiTest {
 
 
 
-        
+
 
         assertThat(createResponse.getStatusCode()).isEqualTo(HttpStatus.CREATED);
 
