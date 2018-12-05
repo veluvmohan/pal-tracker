@@ -21,7 +21,7 @@ public class TimeEntryControllerTest {
     private TimeEntryRepository timeEntryRepository;
     private TimeEntryController controller;
 
-    @Before
+   @Before
     public void setUp() throws Exception {
         timeEntryRepository = mock(TimeEntryRepository.class);
         controller = new TimeEntryController(timeEntryRepository);
@@ -35,9 +35,7 @@ public class TimeEntryControllerTest {
 
         long timeEntryId = 1L;
         TimeEntry expectedResult = new TimeEntry(timeEntryId, projectId, userId, LocalDate.parse("2017-01-08"), 8);
-        doReturn(expectedResult)
-            .when(timeEntryRepository)
-            .create(any(TimeEntry.class));
+        doReturn(expectedResult).when(timeEntryRepository).create(any(TimeEntry.class));
 
 
         ResponseEntity response = controller.create(timeEntryToCreate);
@@ -107,6 +105,7 @@ public class TimeEntryControllerTest {
         assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
         assertThat(response.getBody()).isEqualTo(expected);
     }
+
 
     @Test
     public void testUpdate_NotFound() throws Exception {
